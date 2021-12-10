@@ -8,7 +8,7 @@ class Anagram
   
   def anagram_checker
     if @letters1 == @letters2
-      if (@word1.downcase.count 'aeiouy').to_s != '0'
+      if is_word
         if (@word1.count ' ').to_s == '0'
           return "These words are anagrams."
         else
@@ -28,9 +28,31 @@ class Anagram
   end
 
   def is_word
-    if (@word1.downcase.count 'aeiouy').to_s != '0'
+    if (@word1.downcase.count 'aeiouy').to_s != '0' && is_triple_letter(@word1) && is_triple_letter(@word2)
       return true
     end
     false
   end
+
+  def is_triple_letter(sentence)
+    last = ''
+    second = ''
+    sentence = sentence.split(' ')
+    sentence.each do |word|
+      letters = word.split('')
+      letters.each do |letter|
+        if letter == last && letter == second
+          return false
+        end
+        second = last
+        last = letter
+      end
+    end
+  end
 end
+
+#Helllo
+
+#letter   hell
+#last     hell
+#second   -hel
