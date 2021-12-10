@@ -1,13 +1,12 @@
 class Anagram
   def initialize(word1, word2)
-    @letters1 = word1.downcase.split('').sort
-    @letters2 = word2.downcase.split('').sort
+    @word1 = word1
+    @word2 = word2
   end
   def anagram_checker
-    if @letters1 == @letters2
-      true
-    else
-      false
+    if @word1.downcase.split('').sort == @word2.downcase.split('').sort && (@word1.downcase.count 'aeiouy').to_s != '0'
+      return true
     end
+    false
   end
 end
