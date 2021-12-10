@@ -23,4 +23,8 @@ describe('#anagram') do
     obj = Anagram.new("The Morse Code", "Here come dots!")
     expect(obj.anagram_checker).to(eq("These sentences are anagrams."))
   end
+  it("checks if words contain three letters in row") do
+    obj = Anagram.new("helllo", "ollleh")
+    expect(obj.anagram_checker).to(eq("You need to input actual words!"))
+  end
 end
