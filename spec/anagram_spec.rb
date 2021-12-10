@@ -15,4 +15,8 @@ describe('#anagram') do
     obj1 = Anagram.new("Wrds", "Swrd")
     expect(obj1.anagram_checker).to(eq(false))
   end
+  it("returns if the two words are anitgrams") do
+    obj1 = Anagram.new("Banana", "Shoe")
+    expect(obj1.anagram_checker).to(eq("These words are antigrams"))
+  end
 end
