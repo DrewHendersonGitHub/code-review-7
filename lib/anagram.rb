@@ -2,14 +2,18 @@ class Anagram
   def initialize(word1, word2)
     @word1 = word1
     @word2 = word2
-    @letters1 = @word1.downcase.split('').sort
-    @letters2 = @word2.downcase.split('').sort
+    @letters1 = @word1.downcase.gsub(/[^a-z0-9]/,'').split('').sort
+    @letters2 = @word2.downcase.gsub(/[^a-z0-9]/,'').split('').sort
   end
   
   def anagram_checker
     if @letters1 == @letters2
       if (@word1.downcase.count 'aeiouy').to_s != '0'
-        return "These words are anagrams."
+        if (@word1.count ' ').to_s == '0'
+          return "These words are anagrams."
+        else
+          return "These sentences are anagrams."
+        end
       else
         return "You need to input actual words!"
       end
@@ -19,6 +23,13 @@ class Anagram
       else
         return "These words are not anagrams."
       end
+    end
+    false
+  end
+
+  def is_word
+    if (@word1.downcase.count 'aeiouy').to_s != '0'
+      return true
     end
     false
   end
