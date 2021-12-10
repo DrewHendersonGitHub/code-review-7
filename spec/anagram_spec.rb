@@ -11,4 +11,8 @@ describe('#anagram') do
     obj1 = Anagram.new("Words", "Sword")
     expect(obj1.anagram_checker).to(eq(true))
   end
+  it("returns true if two words both contain vowels") do
+    obj1 = Anagram.new("Wrds", "Swrd")
+    expect(obj1.anagram_checker).to(eq(false))
+  end
 end
