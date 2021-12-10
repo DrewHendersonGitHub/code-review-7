@@ -8,7 +8,7 @@ class Anagram
   
   def anagram_checker
     if @letters1 == @letters2
-      if is_word
+      if (@word1.downcase.count 'aeiouy').to_s != '0' && is_triple_letter(@word1) && is_triple_letter(@word2)
         if (@word1.count ' ').to_s == '0'
           return "These words are anagrams."
         else
@@ -23,13 +23,6 @@ class Anagram
       else
         return "These words are not anagrams."
       end
-    end
-    false
-  end
-
-  def is_word
-    if (@word1.downcase.count 'aeiouy').to_s != '0' && is_triple_letter(@word1) && is_triple_letter(@word2)
-      return true
     end
     false
   end
@@ -50,9 +43,3 @@ class Anagram
     end
   end
 end
-
-#Helllo
-
-#letter   hell
-#last     hell
-#second   -hel
