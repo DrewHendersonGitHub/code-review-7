@@ -30,7 +30,7 @@ class Anagram
   def is_triple_letter(sentence)
     last = ''
     second = ''
-    sentence = sentence.split(' ')
+    sentence = sentence.downcase.gsub(/[^a-z0-9]/,'').split(' ')
     sentence.each do |word|
       letters = word.split('')
       letters.each do |letter|
