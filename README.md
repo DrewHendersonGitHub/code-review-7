@@ -1,56 +1,36 @@
+# _Anagrams and Antigrams_
+
+#### Created By _**Drew Henderson**_
+
+#### _An application that determines if two words are anagrams_
+
+## Technologies Used
+
+* _Ruby_
+* _Docker_
+* _RSpec_
+* _Pry_
+
 ## Description
 
-This template repository includes a basic setup for using Docker to run RSpec tests, Pry, and Ruby scripts using Ruby 2.6.5. 
+_This program is used to test whether two words or phrases are anagrams of each other. If they are not, it will see if they are anitgrams and share zero letters together._
 
-To use Docker, you will first need to [install](https://docs.docker.com/get-docker/) it. Once it's installed, Docker should be open so you can actually run Docker commands in the terminal.
+## Setup/Installation Requirements
 
-## Running IRB
+* _Clone the project into an empty directory using `git clone https://github.com/DrewHendersonGitHub/code-review-7`_
+* _Have Ruby installed on your computer_
+* _Run `ruby lib/script.rb` from the project directory_
 
-You don't need this setup for running IRB (Ruby REPL) by itself. To use IRB on its own, do the following (after Docker is installed and open):
+## Known Bugs
 
-```
-$ docker pull ruby:2.6.5
-```
+_None at this time_
 
-This pulls down the image of Ruby we use at Epicodus. You only need to do this once.
+## License
 
-Once you have it on your machine, you can run IRB with the following command:
+_Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:_
 
-```
-$ docker run -it ruby:2.6.5 irb
-```
+_The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software._
 
-We recommend creating an alias (called something like `dirb` for Docker IRB) to make the command easier to use.
+_THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE._
 
-You can exit IRB as normal by typing `exit`.
-
-## Using This Repository for Docker
-
-This repository is a template repository. To use it, start by creating a new repository with `ruby-rspec-docker-container` as a template. Clone that repository down to your desktop.
-
-The repository contains a simple project that tests a simple `title_case` method. To run tests on the current code, simply run the command `docker-compose up` in the root directory of this project.
-
-To run tests on your own code, replace the `lib` and `spec` directories with your own source code (for `lib`) and tests (for `spec`).
-
-We recommend creating an alias for the following commands. The alias should look something like this:
-
-```
-dspec ()
-{
-  docker-compose down
-  docker-compose up --build
-  docker-compose run --rm app
-}
-```
-
-With this alias, the `dspec` command will automatically run RSpec tests. You can use `binding.pry` as needed.
-
-### Running Scripts
-
-Running scripts is optional at Epicodus. However, if you want to experiment with it, follow these steps:
-
-* The script must be located in `lib` and be called `script.rb`.
-
-* Run the following command: `docker-compose run --rm app ruby lib/script.rb`.
-
-Once again, we recommend aliasing this command if you plan to run scripts often. If you prefer to name your script something else, you just need to update the command to use the correct path and file name.
+Copyright (c) _2021_ _Andrew Henderson_
